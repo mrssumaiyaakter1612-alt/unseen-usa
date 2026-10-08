@@ -798,5 +798,6 @@ document.querySelectorAll(".jm").forEach(b=>b.onclick=()=>$(b.dataset.t).scrollI
  const hot=[...document.querySelectorAll("#spseason .sp-card")].filter(c=>c.dataset.m.split(" ").includes(m)).slice(0,4);
  if(hot.length&&now){hot.forEach(c=>{const b=document.createElement("span");b.className="sp-badge";b.textContent="In season";c.prepend(b);ng.appendChild(c)});now.hidden=false}
  if(jump)jump.addEventListener("click",()=>{const t=document.getElementById(now&&!now.hidden?"spnow":"spall");t.scrollIntoView({behavior:"smooth",block:"start"})})})();
-route();
+{const h0=location.hash.slice(1);if(h0&&!PG[h0]&&!/access_token=/.test(h0))history.replaceState(null,"",location.pathname+location.search)}
+ route();
 </script></body></html>
